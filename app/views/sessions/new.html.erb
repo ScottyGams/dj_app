@@ -1,0 +1,20 @@
+   <div class="login">
+    <h2>User Login</h2>
+<%= form_tag sessions_path do %>
+
+  <div class="field">
+    <%= label_tag :email %>
+    <%= text_field_tag :email, params[:email] %>
+  </div>
+
+  <div class="field">
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag "Log in" %>
+  </div>
+<% end %>
+
+<p><%= link_to 'New User', new_user_path%> </p>
