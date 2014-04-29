@@ -1,4 +1,20 @@
 DjApp::Application.routes.draw do
+  resources :comments
+
+
+  resources :songs do
+    resources :comments, only: [:create, :destroy]
+  end
+
+
+  resources :users
+
+
+  resources :genres
+
+  root to: 'genres#index'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

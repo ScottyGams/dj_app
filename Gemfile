@@ -7,6 +7,12 @@ gem 'rails', '3.2.17'
 
 gem 'sqlite3'
 
+gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'cancan'
+gem 'carrierwave'
+gem 'rmagick'
+gem 'ransack'
+gem "fog", "~> 1.3.1"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -21,6 +27,15 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :development, :test do
+        gem 'nifty-generators', '>= 0.4.0'
+        gem 'pry-rails'
+        gem 'pry-byebug'
+        gem 'pry-stack_explorer'
+        gem 'binding_of_caller'
+        gem 'better_errors'
+      end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
