@@ -39,6 +39,10 @@ class UsersController < ApplicationController
   # PUT /users/1
   # PUT /users/1.json
   def update
+    if params[:user][:password].blank?
+      params[:user].delete(:password)
+      params[:user].delete(:password_confirmation)
+    end
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
       redirect_to @user

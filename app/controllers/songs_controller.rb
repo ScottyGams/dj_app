@@ -2,7 +2,7 @@ class SongsController < ApplicationController
   # GET /songs
   # GET /songs.json
   def index
-    @songs = = Song.order('name ASC')
+    @songs = Song.order('name ASC')
   end
 
     respond_to do |format|

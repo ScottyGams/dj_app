@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 
 
   validates :email, presence: true, uniqueness: true
-  validates :password, confirmation: true, :length => { :in => 6..20 }, if: :password_given?
+  validates :password, confirmation: true, :length => { :in => 6..20 }, on: :create
 
   has_many :songs
   has_many :comments
