@@ -12,21 +12,29 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :name, 'Song:' %>
+    <%= f.text_field :name, :autofocus => true %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <%= f.label :description, 'Description:' %>
+  <%= f.text_area :description, size: "15x5" %>
   </div>
   <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
+    <%if can? :manage, @music_track and current_user.role== "admin" %>
+    <%= f.label :user_id, 'DJ:' %>
+    <%= f.select(:user_id, User.not_admin_users.collect {|p| [ p.name, p.id ] }, { include_blank: true }) %>
+  <% end %>
   </div>
-  <div class="field">
-    <%= f.label :genre_id %><br />
-    <%= f.number_field :genre_id %>
-  </div>
+  <div >
+  <% Genre.order(:name).each do |genre| %><br>
+    <%= genre.name %>
+    <%= check_box_tag 'song[genre_ids][]', genre.id, genre.in?(@song.genres.to_a) %>
+  <% end %>
+</div>
+  <div >
+  <%= f.label :song_upload, 'Song Upload:' %>
+  <%= f.file_field :song_upload%>
+</div>
   <div class="actions">
     <%= f.submit %>
   </div>

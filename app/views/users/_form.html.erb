@@ -13,31 +13,31 @@
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :location %><br />
-    <%= f.text_field :location %>
+    <%= f.text_field :email, :autofocus => true %>
   </div>
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :password_digest %><br />
-    <%= f.text_field :password_digest %>
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.text_field :password_confirmation %>
   </div>
   <div class="field">
     <%= f.label :image %><br />
-    <%= f.text_area :image %>
+    <%= f.file_field :image %>
   </div>
   <div class="field">
-    <%= f.label :role %><br />
-    <%= f.number_field :role %>
-  </div>
-  <div class="field">
-    <%= f.label :about %><br />
-    <%= f.text_area :about %>
+    <%= f.label :about, 'About:' %><br />
+    <%= f.text_area :about, size: "15x5" %>
   </div>
   <div class="actions">
     <%= f.submit %>

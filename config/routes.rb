@@ -6,13 +6,18 @@ DjApp::Application.routes.draw do
     resources :comments, only: [:create, :destroy]
   end
 
+  resources :sessions, only: [:create]
 
+
+  get '/logout', to: 'sessions#destroy'
+  get '/login', to: 'sessions#new'
+  
   resources :users
 
 
   resources :genres
 
-  root to: 'genres#index'
+  root to: 'home#home'
 
 
   # The priority is based upon order of creation:

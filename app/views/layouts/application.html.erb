@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DjApp</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+  <title>DJ App</title>
 </head>
-<body>
+<div class="navbar  navbar-static-top navbar-inverse">
+  <div class="navbar-inner">
+    <ul class="nav">
+      <li><%= link_to 'DJ App', root_path %></li>
+      <li>  <%= link_to 'DJs', users_path %></li>
+      <li><%= link_to 'Songs', songs_path %></li>
 
-<%= yield %>
+              <li class="dropdown">
+                <a class="dropdown-toggle"
+                   data-toggle="dropdown"
+                   href="#">
+                    Genres
+                    <b class="caret"></b>
+                  </a>
+                <ul class="dropdown-menu">
+                  <% @genres.each do |genre| %>
+                  <li ><%= link_to genre.name, genre %></li>
+                  <% end %>
+                </ul>
+              </li>
+
+      <%if current_user and current_user.role == "dj" %>
+        <li><%= link_to 'My Profile', user_path(current_user.id) %></li>
+        <li><%= link_to 'Add New Song', new_music_track_path %></li>
+      <% end %>
+      </ul>
+    <ul class="nav pull-right">
+      <li><% if current_user %>
+        <%= link_to "Log Out, #{current_user.name}!" , logout_path %>
+        <% else %>
+        <%= link_to 'Log In', login_path %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+  <%= yield %>
+</div>
 
 </body>
+<footer>
+  <p> Made by Scotty Gammon </p>
+  </footer>
 </html>
+

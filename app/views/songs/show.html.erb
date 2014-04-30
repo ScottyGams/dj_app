@@ -1,25 +1,43 @@
-<p id="notice"><%= notice %></p>
+<div class="song_control">
+    <h3><%= @song.name %></h3>
 
-<p>
-  <b>Name:</b>
-  <%= @song.name %>
-</p>
+<ul>
+  <li>About: <%= @song.description %></li>
+  <li>DJ: <%= link_to @song.user.name, user_path(@song.user) if @song.user %></li>
+  <li>Genres: <%= @song.genres.map { |song| song.name }.to_sentence %> </li>
+</ul>
 
-<p>
-  <b>Description:</b>
-  <%= @song.description %>
-</p>
+<audio controls>
+  <source src= <%= @song.track_file %> type="audio/ogg">
+  <source src= <%= @song.track_file %> type="audio/mpeg">
+I cant play anything except for ogg and mpeg files
+</audio>
+ </div>
 
-<p>
-  <b>User:</b>
-  <%= @song.user_id %>
-</p>
+<div class="comments_container">
+<h3> Comments: </h3>
+<%if current_user %>
 
-<p>
-  <b>Genre:</b>
-  <%= @song.genre_id %>
-</p>
-
-
-<%= link_to 'Edit', edit_song_path(@song) %> |
-<%= link_to 'Back', songs_path %>
+<% else %>
+<p> You need to <%= link_to 'log in', login_path %> to use comments </p>
+<% end %>
+<ul class="song_comments">
+<% @song.comments.each do |comment| %>
+    <li>
+        <%if can? :destroy, comment %>
+          <%=link_to 'delete', song_comment_path(@song, comment.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+          <%= comment.content %><br>
+          <%= comment.user.name %></li>
+<% end %>
+</ul>
+<%= render partial: 'comments/form' if can? :create, @comment %>
+</div>
+<div class="edit_controls">
+<% if can? :update, @song.user %>
+<%= link_to 'Edit Song', edit_song_path(@song) %> |
+<%= link_to 'Delete Song', @song, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Add Song', new_song_path(@song.user) %> |
+<% end %>
+<%= link_to 'All Songs', songs_path %>
+</div>
