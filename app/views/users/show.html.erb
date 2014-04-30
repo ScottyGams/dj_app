@@ -22,7 +22,7 @@
 
 <p>
   <b>Image:</b>
-  <%= @user.image %>
+  <%= image_tag @user.image.main.url if @user.image %>
 </p>
 
 <p>
