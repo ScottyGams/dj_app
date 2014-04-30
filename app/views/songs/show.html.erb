@@ -4,12 +4,12 @@
 <ul>
   <li>About: <%= @song.description %></li>
   <li>DJ: <%= link_to @song.user.name, user_path(@song.user) if @song.user %></li>
-  <li>Genres: <%= @song.genres.map { |song| song.name }.to_sentence %> </li>
+  <li>Genres <%= @song.genre %> </li>
 </ul>
 
 <audio controls>
-  <source src= <%= @song.track_file %> type="audio/ogg">
-  <source src= <%= @song.track_file %> type="audio/mpeg">
+  <source src= <%#= @song.song _upload %> type="audio/ogg">
+  <source src= <%#= @song.song_upload %> type="audio/mpeg">
 I cant play anything except for ogg and mpeg files
 </audio>
  </div>

@@ -4,7 +4,7 @@ class Song < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true
   validates :song_upload, presence: :true
 
-  belongs_to :genres
+  belongs_to :genre
   belongs_to :user
   has_many :comments
 

@@ -3,7 +3,7 @@ class Ability
 
   def initialize(user)
     user ||= User.new
-    if user.role? '0' #0 is the integer value assigned to DJs
+    if user.role? != nil #0 is the integer value assigned to DJs
       can :read, :all
       can :create, Comment
       can :manage, Song

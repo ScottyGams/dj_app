@@ -26,10 +26,11 @@
   <% end %>
   </div>
   <div >
-  <% Genre.order(:name).each do |genre| %><br>
-    <%= genre.name %>
-    <%= check_box_tag 'song[genre_ids][]', genre.id, genre.in?(@song.genres.to_a) %>
-  <% end %>
+  <%# Genre.order(:name).each do |genre| %><br>
+    <%#= genre.name %>
+    <%#= check_box_tag 'song[genres_id][]', genre.id, genre.in?(@song.genre.to_a) %>
+    <%= f.collection_select :genre_id, @genres, :id, :name %>
+  <%# end %>
 </div>
   <div >
   <%= f.label :song_upload, 'Song Upload:' %>
