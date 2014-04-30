@@ -2,7 +2,6 @@ class Song < ActiveRecord::Base
   attr_accessible :description, :genre_id, :name, :user_id, :song_upload
   
   validates :name, presence: true, uniqueness: true
-  validates :release_date, presence: :true
   validates :song_upload, presence: :true
 
   belongs_to :genres
