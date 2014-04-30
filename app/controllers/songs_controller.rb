@@ -3,7 +3,6 @@ class SongsController < ApplicationController
   # GET /songs.json
   def index
     @songs = Song.order('name ASC')
-  end
 
     respond_to do |format|
       format.html # index.html.erb
