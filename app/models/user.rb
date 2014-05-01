@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_secure_password
-  attr_accessible :about, :email, :image, :location, :name, :password, :password_confirmation, :role
+  attr_accessible :about, :email, :image, :location, :name, :password, :password_confirmation, :role, :border
 
 
   validates :email, presence: true, uniqueness: true

@@ -4,7 +4,7 @@
 
 <% @songs.each do |song| %>
   <dl>
-    <dt><%= link_to song.name, song %></dt>
+    <dt><%= link_to song.name, song %> by <%= song.user.name %></dt>
     <dd> <%= song.description %></dd>
 <!-- LikeBtn.com BEGIN -->
 <span class="likebtn-wrapper" data-style="transparent" data-show_like_label="false" data-counter_type="percent" data-popup_enabled="false" data-show_copyright="false" data-share_enabled="false"></span>

@@ -3,8 +3,8 @@
 <% @users.each_slice(4) do |users| %>
   <div class="row user-row">
     <% users.each do |user| %>
-      <div class="span3">
-        <%= image_tag user.image.thumb.url %>
+      <div class="span3 "> 
+        <%= image_tag(user.image.thumb.url, style: "border: 5px solid #{user.border || '#0066ff'}; border-radius: 3px;")%>
         <h3><%= link_to user.name, user %></h3>
         <p><%= user.location %></p>
 <!-- LikeBtn.com BEGIN -->
@@ -15,3 +15,7 @@
     <% end %>
   </div>
 <% end %>
+
+
+<!-- <%# unless user.border.nil %>user_class<%# end %>
+

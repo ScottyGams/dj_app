@@ -4,7 +4,7 @@
 
 <% @genres.each do |genre| %>
   <ul>
-    <li><%= link_to genre.name, genre %></li>
+    <li><%= link_to genre.name, genre %>by <%= song.user.name %></li>
   </ul>
 <% end %>
 </div>
