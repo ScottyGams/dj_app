@@ -1,23 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<h1>
   <b>Name:</b>
   <%= @user.name %>
-</p>
+</h1>
 
-<p>
+<h2>
   <b>Location:</b>
   <%= @user.location %>
-</p>
+</h2>
 
 
 
 <p>
-  <b>Image:</b>
   <%= image_tag @user.image.main.url if @user.image %>
 </p>
 
-<p>
+<p class="about">
   <b>About:</b>
   <%= @user.about %>
 </p>

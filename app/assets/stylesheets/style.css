@@ -96,37 +96,12 @@ a:hover {
   font-size: 22px;
   margin: 0px;
   line-height: 35px;
-
 }
-
-.dj_tracks_container{
-    width: 40em;
-    display: block; margin: 0 auto;
-    margin-top : 1em;
-}
-.dj_tracks{
-  text-align: center;
-  list-style-type: none;
-  padding: 0;
-  margin: 0 0 20px 0px;
-}
-.dj_tracks h3{
-  line-height: 30px;
-}
-.edit_controls{
-text-align: right;
-margin-bottom: 5px;
-margin-right: 10px;
-}
-
-.dj_info{
-  display: inline-block;
-  width: 30em;
-}
-.dj_info h3{
-font-size: 16px;
-line-height: 20px;
-margin-bottom: 0px;
+.about {
+background: white;
+padding: 10px;
+border-radius: 10px;
+opacity: 0.8;
 }
 .name h2{
   text-transform: uppercase;
@@ -146,12 +121,6 @@ margin-bottom: 0px;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-
-.dj_pic{
-  float: left;
-  padding-right: 15px;
-  padding-left: 30px;
 }
 .navbar-inverse .nav li {
   text-transform:uppercase;
