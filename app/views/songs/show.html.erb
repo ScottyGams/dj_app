@@ -8,8 +8,8 @@
 </ul>
 
 <audio controls>
-  <source src= <%#= @song.song _upload %> type="audio/ogg">
-  <source src= <%#= @song.song_upload %> type="audio/mpeg">
+  <source src= <%= @song.song_upload %> type="audio/ogg">
+  <source src= <%= @song.song_upload %> type="audio/mpeg">
 I cant play anything except for ogg and mpeg files
 </audio>
  </div>
@@ -36,7 +36,7 @@ I cant play anything except for ogg and mpeg files
 <div class="edit_controls">
 <% if can? :update, @song.user %>
 <%= link_to 'Edit Song', edit_song_path(@song) %> |
-<%= link_to 'Delete Song', @song, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Delete Song', @song, method: 'delete', data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Add Song', new_song_path(@song.user) %> |
 <% end %>
 <%= link_to 'All Songs', songs_path %>

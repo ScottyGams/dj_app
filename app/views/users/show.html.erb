@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Email:</b>
-  <%= @user.email %>
+  <b>Name:</b>
+  <%= @user.name %>
 </p>
 
 <p>
@@ -10,19 +10,11 @@
   <%= @user.location %>
 </p>
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
+
 
 <p>
   <b>Image:</b>
   <%= image_tag @user.image.main.url if @user.image %>
-</p>
-
-<p>
-  <b>Role:</b>
-  <%= @user.role %>
 </p>
 
 <p>

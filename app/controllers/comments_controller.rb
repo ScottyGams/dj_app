@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
     @comment.user = current_user
     @comment.song_id = params[:song_id]
     @comment.save
-    redirect_to @song
+    redirect_to song_path(params[:song_id])
   end
 
   def destroy
