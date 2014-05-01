@@ -1,19 +1,6 @@
-/* VARIABLES */
-$purple_primary: #e5e9f2;
-
-
 body{
-    font-family: 'Open Sans', sans-serif;
     padding-bottom: 50px;
     height: 100%;
-}
-
-
-// .container {
-//   margin: auto;
-// }
-h3{
-  text-transform: uppercase;
 }
 .page-wrap{
   width: 60em;
@@ -39,7 +26,6 @@ h3{
 .login{
   width: 220px;
   padding: 10px;
-  background-color: $purple_primary;
   margin-top: 20px;
 }
 .login h2{
@@ -50,11 +36,11 @@ h3{
   border-radius: 0px;
 }
 a {
-  color: #399179;
+  color: #0066FF;
 }
 
 a:hover {
-  color: #c1c30a;
+  color: #0099FF;
   text-decoration: none;
 }
 
@@ -65,7 +51,6 @@ a:hover {
 
 .thumbnail {
   text-align: center;
-  background-color:$purple_primary;
   border: 0px;
   border-radius: 0px;
   margin-left: 0px;
@@ -132,32 +117,7 @@ margin-bottom: 0px;
   letter-spacing:4px;
   line-height: 80px;
   margin-bottom: 20px;
-  text-shadow: 1px 1px 2px #7A7A7A;
-}
-
-.violet{
-  color: #8435A1;
-}
-.pink{
-  color: #E31497;
-}
-.orange{
-  color: #FF5E08;
-}
-.dark_green {
-  color: #107026;
-}
-.lime_green{
-  color: #52FF54;
-}
-.turquoise{
-  color: #21EDE0;
-}
-.dark_blue{
-  color: #104DDE;
-}
-.black{
-  color: #000;
+  text-shadow: 1px 1px 2px #0066FF;
 }
 
 .dj_background{
@@ -180,7 +140,7 @@ margin-bottom: 0px;
 }
 
 .navbar-inverse .nav li a{
-  color: #399179;
+  color: #0066FF;
 }
 
 .navbar-inverse .nav li a:hover,
@@ -200,7 +160,6 @@ margin-bottom: 0px;
   width: 60em;
   padding: 10px;
   padding-top: 5px;
-  background-color: $purple_primary;
   margin: 0 auto;
   margin-top: 20px;
 }
@@ -225,7 +184,6 @@ margin-bottom: 0px;
   width: 50em;
   padding: 10px;
   padding-top: 5px;
-  background-color: $purple_primary;
   margin: 0 auto;
   margin-top: 20px;
 }
@@ -251,7 +209,6 @@ margin-bottom: 0px;
 
 .track_comments li{
   width: 40em;
-  background-color: $purple_primary;
   margin: 10px 0;
   padding: 10px;
 }
@@ -286,7 +243,6 @@ footer p{
 }
 
 .user-row div {
-  background: $purple_primary;
   min-height: 200px;
   text-align: center;
   margin-bottom: 20px;
