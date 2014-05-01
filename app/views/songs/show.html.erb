@@ -31,7 +31,7 @@ I cant play anything except for ogg and mpeg files
           <%= comment.user.name %></li>
 <% end %>
 </ul>
-<%= render partial: 'comments/form' if can? :create, @comment %>
+<%= render partial: 'comments/form' if current_user %>
 </div>
 <div class="edit_controls">
 <% if can? :update, @song.user %>
