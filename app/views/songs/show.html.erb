@@ -4,7 +4,7 @@
 <ul>
   <li>About: <%= @song.description %></li>
   <li>DJ: <%= link_to @song.user.name, user_path(@song.user) if @song.user %></li>
-  <li>Genres <%= @song.genre %> </li>
+  <li>Genres <%= @song.genre.name %> </li>
 </ul>
 
 <audio controls>

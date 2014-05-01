@@ -3,7 +3,7 @@
 <% @users.each_slice(4) do |users| %>
   <div class="row user-row">
     <% users.each do |user| %>
-      <div class="span3">
+      <div class="span4">
         <%= image_tag user.image.thumb.url %>
         <h3><%= link_to user.name, user %></h3>
         <p><%= user.location %></p>

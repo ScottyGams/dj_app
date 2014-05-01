@@ -3,6 +3,8 @@
 <head>
   <title>DJ App</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
 </head>
 <div class="navbar  navbar-static-top navbar-inverse">
   <div class="navbar-inner">
@@ -34,7 +36,7 @@
       <li><% if current_user %>
         <%= link_to "Log Out, #{current_user.name}!" , logout_path %>
         <% else %>
-        <%= link_to 'Log In', login_path %>
+        <%= link_to 'Log In / Sing Up', login_path %>
         <% end %>
       </li>
     </ul>
