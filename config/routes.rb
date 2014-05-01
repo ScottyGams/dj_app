@@ -4,7 +4,7 @@ DjApp::Application.routes.draw do
 
   resources :songs do
     resources :comments, only: [:create, :destroy]
-  end
+  end 
 
   resources :sessions, only: [:create]
 

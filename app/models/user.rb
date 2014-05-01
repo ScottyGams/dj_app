@@ -10,5 +10,7 @@ class User < ActiveRecord::Base
   has_many :comments
   has_many :genres, through: :songs
 
+  default_scope where("role != 'admin'").order('name ASC')
+
   mount_uploader :image, ProfilePicUploader
 end
