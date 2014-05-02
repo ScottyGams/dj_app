@@ -3,6 +3,7 @@
   height:281px;
   width:450px;
   margin:0 auto;
+  border: 10px #0066ff
 }
 #cf img {
   position:absolute;
@@ -21,18 +22,7 @@ body{
     background-image: url(/back.jpg);
     background-size:   cover;                      /* <------ */
     background-repeat: no-repeat;
-}
-.login{
-  width: 220px;
-  padding: 10px;
-  margin-top: 20px;
-}
-.login h2{
-  text-transform: uppercase;
-}
-
-.field input{
-  border-radius: 0px;
+    background-attachment: fixed;
 }
 a {
   color: #0066FF;
@@ -98,31 +88,6 @@ opacity: 0.8;
 .dropdown-menu li a:focus{
   background: black;
 }
-
-.list_music{
-  width: 60em;
-  padding: 10px;
-  padding-top: 5px;
-  margin: 0 auto;
-  margin-top: 20px;
-}
-
-.list_specific_music{
-  width: 40em;
-  padding: 10px;
-  background-color: $purple_primary;
-  margin-top: 20px;
-  margin-left: 50px;
-}
-.list_specific_music h3{
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.list_specific_music a{
-  font-size: 16px;
-  padding-left: 8px;
-}
-
 .music_control{
   width: 50em;
   padding: 10px;

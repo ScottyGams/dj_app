@@ -13,12 +13,18 @@
 
 
 <p>
-  <%= image_tag @user.image.detail.url, style: "border: 5px solid #{@user.border || '#0066ff'}; border-radius: 3px;" if @user.image %>
+  <%= image_tag @user.image.detail.url, style: "border: 10px solid #{@user.border || '#0066ff'}; border-radius: 5px;" if @user.image %>
 </p>
 
 <p class="about">
   <b>About:</b>
   <%= @user.about %>
+</p>
+
+<p class="about">
+ <% @user.songs.each do |song| %>
+<b>Song:</b><span style= "color:'#0066ff' %> ; font-weight:bold" ><%= link_to song.name, song %> </span> <br>
+<% end %>
 </p>
 
 

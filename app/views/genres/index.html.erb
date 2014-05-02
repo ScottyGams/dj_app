@@ -4,7 +4,7 @@
 
 <% @genres.each do |genre| %>
   <ul>
-    <li><%= link_to genre.name, genre %>by <%= song.user.name %></li>
+    <li><%= link_to genre.name, genre %> by <span style="color:<%=song.user.name || '#0066ff' %> ; font-weight:bold" > <%= song.user.name %> </span> </li>
   </ul>
 <% end %>
 </div>

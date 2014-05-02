@@ -5,7 +5,7 @@
 <div class="list_specific_music">
 <h3>Tracks:</h3>
 <% @genre.songs.each do |song| %>
-<%= link_to song.name, song %> by <%= song.user.name %><br>
+<%= link_to song.name, song %> by <span style="color:<%=song.user.border || '#0066ff' %> ; font-weight:bold" > <%= song.user.name %> </span><br>
 <% end %>
 </p>
 </div>
