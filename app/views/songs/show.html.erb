@@ -27,8 +27,8 @@ I cant play anything except for ogg and mpeg files
         <%if can? :destroy, comment %>
           <%=link_to 'delete', song_comment_path(@song, comment.id), method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %>
-          <%= comment.content %><br>
-          <%= comment.user.name %></li>
+          <span><%= comment.content %></span><br>
+          <span style= "color:<%=comment.user.border || '#0066ff' %> ; font-weight:bold" > <%= comment.user.name %> </span></li>
 <% end %>
 </ul>
 <%= render partial: 'comments/form' if current_user %>
