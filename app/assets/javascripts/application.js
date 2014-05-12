@@ -15,4 +15,4 @@
 //= require_tree .
 
 
-$("#like_form_<%= params[:user_id]%>").html("<%= escape_javascript(render('users/unlike')) %>")
+$("#like").html("<%= escape_javascript render('like_button') %>");
