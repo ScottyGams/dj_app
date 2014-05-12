@@ -7,10 +7,13 @@
         <%= image_tag(user.image.thumb.url, style: "border: 5px solid #{user.border || '#0066ff'}; border-radius: 3px;")%>
         <h3><%= link_to user.name, user, style: "color:#{user.border || '#0066ff'};"%></h3>
         <p><%= user.location %></p>
-<!-- LikeBtn.com BEGIN -->
-<span class="likebtn-wrapper" data-style="transparent" data-show_like_label="false" data-counter_type="percent" data-popup_enabled="false" data-show_copyright="false" data-share_enabled="false"></span>
-<script type="text/javascript" src="//w.likebtn.com/js/w/widget.js" async="async"></script>
-<!-- LikeBtn.com END -->
+div id ="like_form">
+    <% if @status.has_like_already?(@status, current_user)%>
+        <%= render 'already_liked'%>
+    <%else%>
+    <%= render 'like'%>
+    <%end%>
+</div>
       </div>
     <% end %>
   </div>

@@ -6,10 +6,13 @@
   <dl class="about">
     <dt><%= link_to song.name, song %> by <span style= "color:<%=song.user.border || '#0066ff' %> ; font-weight:bold" > <%= song.user.name %> </span></dt>
     <dd> <%= song.description %></dd>
-<!-- LikeBtn.com BEGIN -->
-<span class="likebtn-wrapper" data-style="transparent" data-show_like_label="false" data-counter_type="percent" data-popup_enabled="false" data-show_copyright="false" data-share_enabled="false"></span>
-<script type="text/javascript" src="//w.likebtn.com/js/w/widget.js" async="async"></script>
-<!-- LikeBtn.com END -->
+div id ="like_form">
+    <% if @status.has_like_already?(@status, current_user)%>
+        <%= render 'already_liked'%>
+    <%else%>
+    <%= render 'like'%>
+    <%end%>
+</div>
   </dl>
   <br>
 <% end %>

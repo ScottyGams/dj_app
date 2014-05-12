@@ -13,3 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+$("#like_form_<%= params[:user_id]%>").html("<%= escape_javascript(render('users/unlike')) %>")
