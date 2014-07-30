@@ -1,3 +1,9 @@
+GIT
+  remote: http://github.com/rmagick/rmagick.git
+  revision: 79e1708c7f6792a3a90cb8cb3ffaeb74c58e092e
+  specs:
+    rmagick (2.13.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -139,7 +145,6 @@ GEM
       polyamorous (~> 1.0.0)
     rdoc (3.12.2)
       json (~> 1.4)
-    rmagick (2.13.2)
     ruby-hmac (0.4.0)
     sass (3.3.7)
     sass-rails (3.2.6)
@@ -182,6 +187,6 @@ DEPENDENCIES
   rails (= 3.2.17)
   rails_12factor
   ransack
-  rmagick
+  rmagick (= 2.13.2)!
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)

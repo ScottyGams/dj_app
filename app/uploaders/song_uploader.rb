@@ -9,7 +9,7 @@ class SongUploader < CarrierWave::Uploader::Base
 
   process :set_content_type
   # Choose what kind of storage to use for this uploader:
-  storage :fog
+  storage :file
   # storage :fog
 
   # Override the directory where uploaded files will be stored.

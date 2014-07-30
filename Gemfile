@@ -11,7 +11,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'cancan'
 gem 'carrierwave', '0.9.0'
 gem "fog", "~> 1.3.1"
-gem 'rmagick'
+gem 'rmagick', '2.13.2', :git=>'http://github.com/rmagick/rmagick.git'
 gem 'ransack'
 gem 'rails_12factor', group: :production
 
